@@ -1,4 +1,4 @@
-object KMinColoringExample {
+object GraphColoringExample {
 
   import GraphColoring._
 
