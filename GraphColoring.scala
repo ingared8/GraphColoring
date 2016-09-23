@@ -8,7 +8,7 @@ import org.graphframes.GraphFrame
 /**
   * Created by greddy on 8/25/16.
   */
-object KMinColoring {
+object GraphColoring {
 
   /*
 
