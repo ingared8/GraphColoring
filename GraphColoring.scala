@@ -1,8 +1,3 @@
-package com.datascience.waze.spark.streetGraph.lineGraph
-
-import com.datascience.waze.common.Point
-import com.datascience.waze.spark.streetGraph.lineGraph.GraphReductionForWaze.{EdgeAttr, EdgeNodeMsg, EdgePass, VertexAttr}
-import com.datascience.waze.spark.streetGraph.roadParser.{GeoJsonParser, GraphGenerator}
 import org.apache.spark.sql.{DataFrame, Row, SQLContext}
 import org.apache.spark.sql.functions._
 import org.apache.spark.{SparkConf, SparkContext}
