@@ -1,5 +1,4 @@
-
-# Part I - Graph Vertex Coloring in Spark GraphX / GraphFrames
+# Graph Vertex Coloring in Spark GraphX / GraphFrames
 In graph theory, graph coloring or vertex/node coloring or k-coloring is an assignment of colors to graph vertices/nodes such that no two vertices which are connected should share the same color.
 
 One can define graph coloring as
@@ -49,6 +48,35 @@ In this algorithm, we try to solve graph coloring by considering
         For example, if my neighbors are colored (1,2,4,5) , 
         then the node will choose its color as 3.
     */
+    
+
+# Fast Implementation for Connected Graphs
+The time complexity of the naive process is not efficient. An efficient version is highly fast compared to naive but works only on a connected graph. If the graph is disconnected , it should be made sure to initialize atleast one value in each connected component to  be initialized with  a value in range of (1, k+1)
+
+  * This works on the principle of the principle of breadth first expansion
+  ********************************************
+    A Fast algorithm  for ColorReduction
+  *******************************************
+    function ColorReductionFast(G = (V, E), ∆, maxIter)
+        
+        n = |V |
+        for v = Range(n) do
+            color(v) = v
+        end for
+
+        COLORED = {node | color(node) <= ( ∆ +1 ) } 
+        NOT_COLORED = {node | color(node) > ( ∆ +1 ) } 
+        
+        for e ∈ (u,v) | u ∈ COLORED && v ∈ NOT_COLORED {
+            {  c(v) = min({1, ..., ∆ + 1} \ {cu|(u, v) ∈ E}) }
+
+                        (or )
+
+        for iter = 1 , maxIter do
+            // updates colors of the neighbors of nodes whose colors are are already labelled.
+            color(v) = min({1, ..., ∆ + 1} \ {cu|(u, v) ∈ E}) such that color(u) < ∆ +1  && color (v) > (∆ + 1)
+       end for
+    end function
     
 More info @  https://en.wikipedia.org/wiki/Graph_coloring
 
