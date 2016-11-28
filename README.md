@@ -59,29 +59,29 @@ The time complexity of the naive process is not efficient. An efficient version 
   ********************************************
     A Fast algorithm  for ColorReduction
   *******************************************
-    function ColorReductionFast(G = (V, E), ∆, maxIter)
+      function ColorReductionFast(G = (V, E), ∆, maxIter)
         
-        n = |V |
-        for v = Range(n) do
-            color(v) = v
+         n = |V |
+         for v = Range(n) do
+             color(v) = v
+         end for
+
+         COLORED = {node | color(node) <= ( ∆ +1 ) } 
+         NOT_COLORED = {node | color(node) > ( ∆ +1 ) } 
+
+         for e ∈ (u,v) | u ∈ COLORED && v ∈ NOT_COLORED {
+             {  c(v) = min({1, ..., ∆ + 1} \ {cu|(u, v) ∈ E}) }
+
+                         (or )
+
+         for iter = 1 , maxIter do
+             // updates colors of the neighbors of nodes whose colors are are already labelled.
+             color(v) = min({1, ..., ∆ + 1} \ {cu|(u, v) ∈ E}) such that color(u) < ∆ +1  && color (v) > (∆ + 1)
         end for
-
-        COLORED = {node | color(node) <= ( ∆ +1 ) } 
-        NOT_COLORED = {node | color(node) > ( ∆ +1 ) } 
-        
-        for e ∈ (u,v) | u ∈ COLORED && v ∈ NOT_COLORED {
-            {  c(v) = min({1, ..., ∆ + 1} \ {cu|(u, v) ∈ E}) }
-
-                        (or )
-
-        for iter = 1 , maxIter do
-            // updates colors of the neighbors of nodes whose colors are are already labelled.
-            color(v) = min({1, ..., ∆ + 1} \ {cu|(u, v) ∈ E}) such that color(u) < ∆ +1  && color (v) > (∆ + 1)
-       end for
-    end function
+      end function
     
 More info @  https://en.wikipedia.org/wiki/Graph_coloring
 
 
-More info @  https://en.wikipedia.org/wiki/Graph_coloring
+
 
