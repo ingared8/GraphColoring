@@ -24,6 +24,8 @@ In this algorithm, we try to solve graph coloring by considering
         k =  ∆(G) + 1
 
    ∆(G) is represented as ∆ for simplicity.
+   
+ # Native Implementation
  *******************************************
  A simple naive algorithm  for ColorReduction
  *******************************************
