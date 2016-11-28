@@ -1,10 +1,4 @@
 
-This scala code covers two versions of Graph Vertex coloring which can be used in saprk GraphX/ GraphFrames.
-The code and examples are self explanantory.
-
-/* I'm just releasing part of the code which could be useful for community from a private project and sorry for not adding sbt build files */
-
-#
 # Part I - Graph Vertex Coloring in Spark GraphX / GraphFrames
 In graph theory, graph coloring or vertex/node coloring or k-coloring is an assignment of colors to graph vertices/nodes such that no two vertices which are connected should share the same color.
 
