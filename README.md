@@ -25,7 +25,7 @@ In this algorithm, we try to solve graph coloring by considering
 
    ∆(G) is represented as ∆ for simplicity.
    
- # Native Implementation
+# Native Implementation
  *******************************************
  A simple naive algorithm  for ColorReduction
  *******************************************
@@ -78,7 +78,7 @@ The time complexity of the naive process is not efficient. An efficient version 
             // updates colors of the neighbors of nodes whose colors are are already labelled.
             color(v) = min({1, ..., ∆ + 1} \ {cu|(u, v) ∈ E}) such that color(u) < ∆ +1  && color (v) > (∆ + 1)
        end for
-    end function
+   end function
     
 More info @  https://en.wikipedia.org/wiki/Graph_coloring
 
